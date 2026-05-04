@@ -1,0 +1,23 @@
+[gd_resource type="Theme" load_steps=6 format=3 uid="uid://bo0gmp477oin6"]
+
+[ext_resource type="FontFile" uid="uid://cv0ys8uf5nwln" path="res://Pokemon Classic.ttf" id="1_cyija"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cyija"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ds3pn"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vs1qn"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ykkn7"]
+
+[resource]
+Button/colors/font_color = Color(0, 0, 0, 1)
+Button/colors/font_focus_color = Color(0.94902, 0.94902, 0, 1)
+Button/colors/font_hover_color = Color(0.94902, 0.94902, 0, 1)
+Button/colors/font_pressed_color = Color(0.94902, 0.784314, 0, 1)
+Button/font_sizes/font_size = 24
+Button/fonts/font = ExtResource("1_cyija")
+Button/styles/focus = SubResource("StyleBoxEmpty_cyija")
+Button/styles/hover = SubResource("StyleBoxEmpty_ds3pn")
+Button/styles/normal = SubResource("StyleBoxEmpty_vs1qn")
+Button/styles/pressed = SubResource("StyleBoxEmpty_ykkn7")

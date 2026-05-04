@@ -1,0 +1,50 @@
+[gd_scene load_steps=3 format=3 uid="uid://duwb8ekqvho0e"]
+
+[ext_resource type="Script" uid="uid://brtsxh18qqysw" path="res://script/interact_options.gd" id="1_3lc26"]
+[ext_resource type="FontFile" uid="uid://cv0ys8uf5nwln" path="res://Pokemon Classic.ttf" id="1_snt4x"]
+
+[node name="interact_options" type="CanvasLayer"]
+script = ExtResource("1_3lc26")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -76.0
+offset_top = -188.0
+offset_right = 124.0
+offset_bottom = -28.0
+grow_horizontal = 2
+grow_vertical = 0
+color = Color(0.0196078, 0.0196078, 0.0196078, 0.372549)
+
+[node name="Observar" type="Button" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -40.0
+offset_bottom = -15.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_snt4x")
+text = "OBSERVAR"
+
+[node name="Sair" type="Button" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = 8.0
+offset_bottom = 42.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_snt4x")
+text = "SAIR"
+
+[connection signal="pressed" from="ColorRect/Observar" to="." method="_on_observar_pressed"]
+[connection signal="pressed" from="ColorRect/Sair" to="." method="_on_sair_pressed"]

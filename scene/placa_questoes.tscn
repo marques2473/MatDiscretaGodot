@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://hu8atuni04w1"]
+
+[ext_resource type="Script" uid="uid://cl0os6qtae05n" path="res://script/placa_questoes.gd" id="1_tdypr"]
+[ext_resource type="Texture2D" uid="uid://bqqcth1rf6s3p" path="res://sprites/ConstrucaoMapa/placa.png" id="1_wq6sm"]
+[ext_resource type="PackedScene" uid="uid://c027i7ugpu6mt" path="res://Interaction/Interaction area/interaction_area.tscn" id="2_tdypr"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_86bp3"]
+
+[node name="Placa_quest" type="Node2D" node_paths=PackedStringArray("_hud") groups=["placas"]]
+script = ExtResource("1_tdypr")
+_hud = NodePath("HUD")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, 35)
+scale = Vector2(0.60446, 0.641199)
+texture = ExtResource("1_wq6sm")
+
+[node name="InteractionArea" parent="." instance=ExtResource("2_tdypr")]
+action_name = "SEE"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
+scale = Vector2(17.679, 17.08)
+shape = SubResource("CircleShape2D_86bp3")
+
+[node name="HUD" type="CanvasLayer" parent="."]

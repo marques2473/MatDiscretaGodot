@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://dds1udu0nydyw"]
+
+[ext_resource type="Script" uid="uid://dspiqiiaymb7j" path="res://script/questão_OLD.gd" id="1_xxe1h"]
+[ext_resource type="Texture2D" uid="uid://bqqcth1rf6s3p" path="res://sprites/ConstrucaoMapa/placa.png" id="2_qd88m"]
+[ext_resource type="Theme" uid="uid://bo0gmp477oin6" path="res://theme_btn.tres" id="3_rv7ao"]
+[ext_resource type="FontFile" uid="uid://cv0ys8uf5nwln" path="res://Pokemon Classic.ttf" id="4_r87vt"]
+
+[node name="Questão" type="CanvasLayer" unique_id=1995588274]
+script = ExtResource("1_xxe1h")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2085152309]
+position = Vector2(579, 631)
+scale = Vector2(10, 10)
+texture = ExtResource("2_qd88m")
+
+[node name="responder" type="Button" parent="." unique_id=1561722347]
+offset_left = 111.0
+offset_top = 427.0
+offset_right = 1083.0
+offset_bottom = 598.0
+theme = ExtResource("3_rv7ao")
+theme_override_fonts/font = ExtResource("4_r87vt")
+theme_override_font_sizes/font_size = 80
+text = "RESPONDER"
+
+[node name="Label" type="Label" parent="." unique_id=1908149612]
+offset_left = 277.0
+offset_top = 169.0
+offset_right = 840.0
+offset_bottom = 356.0
+theme_override_font_sizes/font_size = 120
+text = "1+1 = 2"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="responder" to="." method="_on_responder_pressed"]

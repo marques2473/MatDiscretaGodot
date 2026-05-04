@@ -1,0 +1,51 @@
+[gd_scene load_steps=3 format=3 uid="uid://dql3hia08sq2b"]
+
+[ext_resource type="Script" uid="uid://ccx0gt0knqvi" path="res://menu_final.gd" id="1_g7onn"]
+[ext_resource type="Theme" uid="uid://bo0gmp477oin6" path="res://theme_btn.tres" id="2_yk4rg"]
+
+[node name="menu_final" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_g7onn")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -88.0
+offset_top = 150.0
+offset_right = 88.0
+offset_bottom = 199.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 40
+text = "FIM DO JOGO !!
+OBRIGADO POR JOGAR"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 448.0
+offset_top = 414.0
+offset_right = 722.0
+offset_bottom = 464.0
+theme = ExtResource("2_yk4rg")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 30
+text = "QUIT GAME"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
