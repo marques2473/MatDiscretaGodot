@@ -44,7 +44,23 @@ func _on_interact():
 	if todas_placas_corretas():
 		print(todas_placas_corretas())
 		print("todas_placas_corretas() #end")
-		get_tree().change_scene_to_file("res://scene/proxima_fase.tscn")
+		if Global.fase == 1:
+			get_tree().change_scene_to_file("res://scene/segunda_fase.tscn")
+			Global.fase = 2
+			return
+		if Global.fase == 2:
+			get_tree().change_scene_to_file("res://scene/terceira_fase.tscn")
+			Global.fase = 3
+			return
+		if Global.fase == 3:
+			get_tree().change_scene_to_file("res://scene/quarta_fase.tscn")
+			Global.fase = 4
+			return
+		if Global.fase == 4:
+			get_tree().change_scene_to_file("res://scene/fase_final.tscn")
+			Global.fase = 5
+			return
+		
 		return
 	
 	var new_dialog: DialogScreen = _DIALOG_SCREEN.instantiate()
@@ -66,10 +82,12 @@ func todas_placas_corretas() -> bool:
 	
 	print("Global.acertos:")
 	print(Global.acertos)
-	if Global.acertos < 4:
-		return false
+	# comentar if para debug
+	#if Global.acertos < 4:
+		#print("return false")
+		#return false
 	
-	if placas.size() < 4:
+	if placas.size() < 4: #não sei se serve pra algo
 		print("placas.size() < 4 #true")
 		return false
 	

@@ -7,8 +7,6 @@ class_name PortaFaseScript
 
 const DIALOG_SCREEN: PackedScene = preload("res://scene/dialog_screen.tscn")
 
-@export var proxima_fase: String = "res://scene/segunda_fase.tscn"
-
 var dialogo_porta_fechada: Dictionary = {
 	0: {
 		"faceset": "res://sprites/ConstrucaoMapa/Captura de tela 2026-04-26 173003.png",
@@ -21,6 +19,14 @@ func _ready() -> void:
 	interaction_area.interact = Callable(self, "_on_interact")
 
 func _on_interact() -> void:
+	var proxima_fase: String = "res://scene/segunda_fase.tscn"
+	if Global.fase == 2:
+		proxima_fase = "res://scene/terceira_fase.tscn"
+	if Global.fase == 3:
+		proxima_fase = "res://scene/quarta_fase.tscn"
+	if Global.fase == 4:
+		proxima_fase = "res://scene/fase_final.tscn"
+	
 	InteractionManager.can_interact = false
 	player.can_move = false
 
