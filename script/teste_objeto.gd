@@ -42,6 +42,8 @@ func _on_interact():
 	player.can_move = false
 	
 	if todas_placas_corretas():
+		print(todas_placas_corretas())
+		print("todas_placas_corretas() #end")
 		get_tree().change_scene_to_file("res://scene/proxima_fase.tscn")
 		return
 	
@@ -58,12 +60,21 @@ func _on_interact():
 
 func todas_placas_corretas() -> bool:
 	var placas = get_tree().get_nodes_in_group("placas")
+	print("todas_placas_corretas() :metodo chamado")
+	print("placas.size:")
+	print(placas.size())
 	
-	if placas.size() < 4:
+	print("Global.acertos:")
+	print(Global.acertos)
+	if Global.acertos < 4:
 		return false
 	
-	for placa in placas:
-		if placa.player_acertou == false:
-			return false
+	if placas.size() < 4:
+		print("placas.size() < 4 #true")
+		return false
+	
+	#for placa in placas:
+		#if placa.player_acertou == false:
+			#return false
 	
 	return true

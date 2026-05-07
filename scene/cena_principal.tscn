@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://dyqc6is4w8nhl"]
+[gd_scene format=3 uid="uid://dyqc6is4w8nhl"]
 
 [ext_resource type="PackedScene" uid="uid://bua5q8dlucg1a" path="res://scene/cavaleiro_prot.tscn" id="1_uajso"]
 [ext_resource type="Texture2D" uid="uid://djbpo5fq62pce" path="res://sprites/ConstrucaoMapa/doors_lever_chest_animation.png" id="2_444h8"]
@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://tuhmenoe2m0r" path="res://sprites/ConstrucaoMapa/walls_floor.png" id="5_rq774"]
 [ext_resource type="PackedScene" uid="uid://cnxud82jjk0o0" path="res://scene/pause_menu.tscn" id="7_hnaq2"]
 [ext_resource type="PackedScene" uid="uid://hu8atuni04w1" path="res://scene/placa_questoes.tscn" id="8_jiqk1"]
-[ext_resource type="PackedScene" uid="uid://da0k3ttndjodp" path="res://scene/porta_fase.tscn" id="8_rq774"]
+[ext_resource type="PackedScene" uid="uid://da0k3ttndjodp" path="res://scene/teste_objeto.tscn" id="8_rq774"]
 [ext_resource type="FontFile" uid="uid://cv0ys8uf5nwln" path="res://Pokemon Classic.ttf" id="9_jiqk1"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_rq774"]
@@ -832,13 +832,13 @@ size = Vector2(29.5833, 232)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hnaq2"]
 size = Vector2(407.333, 33.6667)
 
-[node name="CenaPrincipal" type="Node2D"]
+[node name="CenaPrincipal" type="Node2D" unique_id=2027042399]
 
-[node name="CavaleiroProt" parent="." instance=ExtResource("1_uajso")]
+[node name="CavaleiroProt" parent="." unique_id=1011640669 instance=ExtResource("1_uajso")]
 z_index = 2
 position = Vector2(589, 324)
 
-[node name="Cenario" type="TileMap" parent="."]
+[node name="Cenario" type="TileMap" parent="." unique_id=1803334096]
 position = Vector2(-8, -1)
 scale = Vector2(3, 3)
 tile_set = SubResource("TileSet_0118g")
@@ -850,57 +850,57 @@ layer_1/z_index = 1
 layer_1/navigation_enabled = false
 layer_1/tile_data = PackedInt32Array(65547, 524291, 26, 131083, 524291, 27, 65548, 589827, 26, 131084, 589827, 27, 13, 131075, 3, 65549, 131075, 4, 131085, 131075, 5, 14, 131075, 3, 65550, 131075, 4, 131086, 131075, 5, 15, 131075, 3, 65551, 131075, 4, 131087, 131075, 5, 16, 131075, 3, 65552, 131075, 4, 131088, 131075, 5, 17, 131075, 3, 65553, 131075, 4, 131089, 131075, 5, 18, 131075, 3, 65554, 131075, 4, 131090, 131075, 5, 19, 131075, 3, 65555, 131075, 4, 131091, 131075, 5, 20, 131075, 3, 65556, 131075, 4, 131092, 131075, 5, 21, 131075, 3, 65557, 131075, 4, 131093, 131075, 5, 22, 131075, 3, 65558, 131075, 4, 131094, 131075, 5, 23, 458755, 1, 65559, 458755, 2, 131095, 458755, 3, 10, 131075, 3, 65546, 131075, 4, 131082, 131075, 5, 9, 131075, 3, 65545, 131075, 4, 131081, 131075, 5, 8, 131075, 3, 65544, 131075, 4, 131080, 131075, 5, 7, 131075, 3, 65543, 131075, 4, 131079, 131075, 5, 6, 131075, 3, 65542, 131075, 4, 131078, 131075, 5, 5, 131075, 3, 65541, 131075, 4, 131077, 131075, 5, 4, 131075, 3, 65540, 131075, 4, 131076, 131075, 5, 3, 131075, 3, 65539, 131075, 4, 131075, 131075, 5, 2, 131075, 3, 65538, 131075, 4, 131074, 131075, 5, 1, 131075, 3, 65537, 131075, 4, 131073, 131075, 5, 0, 327683, 1, 65536, 327683, 2, 131072, 327683, 3, 196608, 327683, 2, 262144, 327683, 3, 327680, 327683, 2, 393216, 327683, 3, 458752, 327683, 2, 524288, 327683, 3, 589824, 327683, 2, 655360, 327683, 3, 720896, 327683, 2, 786432, 327683, 3, 851968, 327683, 4, 851969, 393219, 4, 851970, 393219, 4, 851971, 393219, 4, 851972, 393219, 4, 851973, 393219, 4, 851974, 393219, 4, 851975, 393219, 4, 851976, 393219, 4, 851977, 393219, 4, 851978, 393219, 4, 851979, 393219, 4, 851980, 393219, 4, 851981, 393219, 4, 851982, 393219, 4, 851983, 393219, 4, 851984, 393219, 4, 851985, 393219, 4, 851986, 393219, 4, 851987, 393219, 4, 851988, 393219, 4, 851989, 393219, 4, 851990, 393219, 4, 851991, 458755, 4, 720919, 458755, 2, 786455, 458755, 3, 589847, 458755, 2, 655383, 458755, 3, 458775, 458755, 2, 524311, 458755, 3, 327703, 458755, 2, 393239, 458755, 3, 196631, 458755, 2, 262167, 458755, 3, 11, 131075, 3, 12, 131075, 3)
 
-[node name="Paredes" type="StaticBody2D" parent="Cenario"]
+[node name="Paredes" type="StaticBody2D" parent="Cenario" unique_id=1205909857]
 visible = false
 
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="Cenario/Paredes"]
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Cenario/Paredes" unique_id=1112771092]
 position = Vector2(192.333, 218.333)
 shape = SubResource("RectangleShape2D_lbcty")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Cenario/Paredes"]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Cenario/Paredes" unique_id=2092916565]
 z_index = 3
 position = Vector2(381.917, 109.667)
 shape = SubResource("RectangleShape2D_444h8")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Cenario/Paredes"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cenario/Paredes" unique_id=990006096]
 z_index = 3
 position = Vector2(1.54167, 107.333)
 shape = SubResource("RectangleShape2D_444h8")
 
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="Cenario/Paredes"]
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Cenario/Paredes" unique_id=91157283]
 z_index = 1
 position = Vector2(193.333, 25.8333)
 shape = SubResource("RectangleShape2D_hnaq2")
 
-[node name="Porta1" parent="." instance=ExtResource("8_rq774")]
+[node name="Porta1" parent="." unique_id=116141479 instance=ExtResource("8_rq774")]
 position = Vector2(569, 61)
 
-[node name="pause_menu" parent="." instance=ExtResource("7_hnaq2")]
+[node name="pause_menu" parent="." unique_id=145191974 instance=ExtResource("7_hnaq2")]
 visible = false
 
-[node name="placas" type="Node2D" parent="."]
+[node name="placas" type="Node2D" parent="." unique_id=2101299884]
 
-[node name="Placa_quest3" parent="placas" instance=ExtResource("8_jiqk1")]
+[node name="Placa_quest3" parent="placas" unique_id=1415335572 instance=ExtResource("8_jiqk1")]
 position = Vector2(882, 461)
 pergunta = "2, 4, 8, 16, ?"
 resposta_correta = "32"
 
-[node name="Placa_quest4" parent="placas" instance=ExtResource("8_jiqk1")]
+[node name="Placa_quest4" parent="placas" unique_id=1333114992 instance=ExtResource("8_jiqk1")]
 position = Vector2(246, 459)
 pergunta = "64, 32, 16, 8, ?"
 resposta_correta = "4"
 
-[node name="Placa_quest2" parent="placas" instance=ExtResource("8_jiqk1")]
+[node name="Placa_quest2" parent="placas" unique_id=297499983 instance=ExtResource("8_jiqk1")]
 position = Vector2(248, 276)
 pergunta = "5, 10, 20, 40, ?"
 resposta_correta = "80"
 
-[node name="Placa_quest" parent="placas" instance=ExtResource("8_jiqk1")]
+[node name="Placa_quest" parent="placas" unique_id=1042770409 instance=ExtResource("8_jiqk1")]
 position = Vector2(876, 265)
 pergunta = "1, 3, 9, 27, ?"
 resposta_correta = "81"
 
-[node name="Label" type="Label" parent="."]
+[node name="Label" type="Label" parent="." unique_id=1393010341]
 z_index = 2
 offset_right = 147.0
 offset_bottom = 56.0

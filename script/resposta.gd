@@ -26,6 +26,9 @@ func _verificar_resposta(texto: String = "") -> void:
 
 	if resposta_digitada == certa:
 		mensagem.text = "Resposta correta!"
+		print("★Resposta correta! Global.acertos:")
+		Global.acertos += 1
+		print(Global.acertos)
 		placa_origem.acertou = true
 
 		await get_tree().create_timer(0.8).timeout

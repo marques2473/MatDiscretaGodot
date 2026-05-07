@@ -17,6 +17,8 @@ func _ready() -> void:
 
 func _on_interact() -> void:
 	if acertou:
+		print("★★★★★ acertou")
+		Global.acertos += 1
 		return
 
 	InteractionManager.can_interact = false
